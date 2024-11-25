@@ -1,0 +1,823 @@
+:root {
+  --orange: #d87d4a;
+  --black: #101010;
+  --gray: #f1f1f1;
+  --gray-light: #fafafa;
+  --orange-hover: #fbaf85;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"),
+    url("../fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"),
+    url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"),
+    url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Light.woff2") format("woff2"),
+    url("../fonts/Manrope-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Manrope", "Arial", sans-serif;
+  margin: 0;
+}
+
+main {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--black);
+  padding: 35px 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+.header__logo {
+  width: 143px;
+  height: 25px;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+}
+
+.header__link {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__shopping {
+  width: 24px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.header__shopping:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--gray);
+  padding: 50px 0;
+}
+
+.footer_main {
+  align-items: center;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.footer_bottom > div {
+  max-width: 50%;
+  width: fit-content;
+}
+.left {
+  width: 100%;
+  max-width: 540px;
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  opacity: 0.5;
+  padding-top: 35px;
+}
+
+.footer_logos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  img {
+    transition: 0.5s;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+.footer_left p {
+  opacity: 0.5;
+}
+
+.footer_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+}
+
+.footer_logo {
+  width: 143px;
+  height: 25px;
+}
+@media (max-width: 770px) {
+  .header__list {
+    display: none;
+  }
+  .footer_top {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_logo {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 490px) {
+  .footer_list {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* main */
+
+.xx99headphone {
+  padding: 40px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.goback {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.img img {
+  width: 540px;
+  height: 560px;
+  border-radius: 10px;
+}
+
+.xx99headphone-details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 56px;
+  align-items: center;
+  padding-bottom: 160px;
+}
+
+.buttonn {
+  padding: 10px 20px;
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: Manrope;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.xx99headphone-text {
+  width: 400px;
+  height: 407px;
+}
+
+.xx99headphone-text h1 {
+  text-transform: uppercase;
+}
+.xx99headphone-text span {
+  font-size: 14px;
+  color: var(--orange-hover);
+  text-transform: uppercase;
+}
+
+.input-button {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.input-button input {
+  text-align: center;
+  width: 50px;
+  border: 1px solid var(--white);
+  padding: 9px;
+  border-radius: 5px;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  color: var(--black);
+}
+
+@media (max-width: 1000px) {
+  .img img {
+    width: 390px;
+    height: 500px;
+  }
+  .xx99headphone-text {
+    width: 340px;
+  }
+}
+
+@media (max-width: 810px) {
+  .img img {
+    width: 350px;
+    height: 440px;
+  }
+  .xx99headphone-text {
+    width: 300px;
+  }
+}
+
+@media (max-width: 670px) {
+  .img img {
+    width: 300px;
+    height: 400px;
+  }
+  .xx99headphone-text {
+    width: 250px;
+  }
+}
+
+@media (max-width: 590px) {
+  .img img {
+    width: 200px;
+    height: 300px;
+  }
+  .xx99headphone-text {
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .img img {
+    width: 327px;
+    height: 327px;
+  }
+
+  .xx99headphone-text {
+    width: 327px;
+  }
+
+  .xx99headphone-details {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 330px) {
+  .img img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .xx99headphone-text {
+    width: 270px;
+  }
+}
+
+@media (max-width: 280px) {
+  .img img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .xx99headphone-text {
+    width: 230px;
+  }
+}
+
+@media (max-width: 235px) {
+  .img img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .xx99headphone-text {
+    width: 160px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .footer_logo {
+    width: 120px;
+    height: 25px;
+  }
+}
+
+.texts {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 160px;
+}
+.features {
+  width: 636px;
+}
+.features span {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+}
+
+.features p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--black);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.inthebox_title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.inthebox1X {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--orange-hover);
+}
+
+.inthebox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.inthebox li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--black);
+  mix-blend-mode: normal;
+  /* opacity: 0.5; */
+}
+
+.inthebox1X {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--orange-hover);
+  opacity: 1;
+}
+
+.inthebox {
+  width: 350px;
+  height: 225px;
+}
+
+@media (max-width: 1000px) {
+  .texts {
+    padding: 0 30px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 880px) {
+  .features {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 790px) {
+  .texts {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .inthebox {
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+  }
+}
+
+@media (max-width: 732px) {
+  .inthebox {
+    max-width: 100%;
+  }
+  .inthebox_title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inthebox {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inthebox {
+    flex-direction: column;
+  }
+  .features p {
+    width: 327px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.5;
+  }
+  .inthebox {
+    width: 327px;
+  }
+}
+
+.human_img {
+  background-image: url("/images/Bitmap1_desktop.png");
+  width: 445px;
+  height: 280px;
+  background-size: cover;
+}
+
+.gadgets_img {
+  width: 445px;
+  height: 280px;
+  background-image: url("/images/Bitmap2_desktop.png");
+  background-size: cover;
+}
+
+.headphone_img {
+  width: 635px;
+  height: 572px;
+  background-image: url("/images/Bitmap3_desktop.png");
+  background-size: cover;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 160px;
+}
+
+.human-gadget {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 1090px) {
+  .human_img {
+    width: 300px;
+    height: 190px;
+  }
+
+  .gadgets_img {
+    width: 300px;
+    height: 190px;
+  }
+
+  .headphone_img {
+    width: 450px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 770px) {
+  .human_img {
+    background-image: url("/images/Bitmap1_tablet.png");
+    width: 277px;
+    height: 174px;
+    background-size: cover;
+  }
+
+  .gadgets_img {
+    width: 277px;
+    height: 174px;
+    background-image: url("/images/Bitmap2_tablet.png");
+    background-size: cover;
+  }
+
+  .headphone_img {
+    width: 395px;
+    height: 360px;
+    background-image: url("/images/Bitmap3_tablet.png");
+    background-size: cover;
+  }
+}
+
+@media (max-width: 690px) {
+  .human_img {
+    width: 210px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .gadgets_img {
+    width: 210px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .headphone_img {
+    width: 300px;
+    height: 315px;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 530px) {
+  .photos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .human_img {
+    width: 327px;
+    height: 174px;
+    background-size: cover;
+  }
+
+  .gadgets_img {
+    width: 327px;
+    height: 174px;
+    background-size: cover;
+  }
+
+  .headphone_img {
+    width: 327px;
+    height: 368px;
+    background-size: cover;
+  }
+}
+
+.XX99MARKI-img {
+  background-image: url("/images/x99mark1.png");
+  width: 350px;
+  height: 318px;
+  background-size: cover;
+}
+
+.XX59-img {
+  background-image: url("/images/xx59.png");
+  width: 350px;
+  height: 318px;
+  background-size: cover;
+}
+
+.ZX9SPEAKER-img {
+  background-image: url("/images/ZX9SPEAKER.png");
+  width: 350px;
+  height: 318px;
+  background-size: cover;
+}
+
+.pictures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 160px;
+}
+
+.models {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.ZX9SPEAKER,
+.XX59,
+.XX99MARKI {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.models button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  background-color: var(--orange);
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.models p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.pictures-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+@media (max-width: 1110px) {
+  .ZX9SPEAKER-img,
+  .XX59-img,
+  .XX99MARKI-img {
+    background-size: cover;
+    width: 220px;
+    height: 238px;
+  }
+}
+
+@media (max-width: 720px) {
+  .ZX9SPEAKER-img,
+  .XX59-img,
+  .XX99MARKI-img {
+    background-size: cover;
+    width: 150px;
+    height: 168px;
+  }
+}
+
+@media (max-width: 550px) {
+  .models {
+    flex-direction: column;
+  }
+  .ZX9SPEAKER-img,
+  .XX59-img,
+  .XX99MARKI-img {
+    width: 327px;
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  .XX99MARKI-img {
+    background-image: url("/images/XX99MARKI_phone.png");
+  }
+
+  .XX59-img {
+    background-image: url("/images/XX59_phone.png");
+  }
+
+  .ZX9SPEAKER-img {
+    background-image: url("/images/ZX9\ SPEAKER_phone.png");
+  }
+}
+
+.low {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 160px;
+}
+.low_text {
+  width: 445px;
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--black);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+}
+.low_img {
+  background-image: url("/images/human2.png");
+  width: 540px;
+  height: 588px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1000px) {
+  .low {
+    padding: 0 10px;
+  }
+  .low_img {
+    width: 440px;
+  }
+  .low_text {
+    width: 380px;
+  }
+}
+
+@media (max-width: 800px) {
+  .low {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .low_img {
+    background-image: url("/images/human2_tablet.png");
+    width: 600px;
+    height: 300px;
+  }
+  .low_text {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .low_img {
+    width: 450px;
+  }
+  .low_text {
+    width: 350px;
+  }
+}
+
+@media (max-width: 450px) {
+  .low_img {
+    width: 350px;
+  }
+  .low_text {
+    width: 250px;
+  }
+}
